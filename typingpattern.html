@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Postman Hackathon</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="typingdna.js" type="text/javascript"></script>
+    <script type="text/javascript">
+         $(document).ready(function(){
+				var tdna  = new TypingDNA();
+				try
+				{
+					document.getElementById("getTypingPatternButton").addEventListener("click", myFunction);
+                    function myFunction() {
+                        var dna_post = document.getElementById("textArea").value;
+                        var typingPattern = tdna.getTypingPattern({type:1, text:dna_post});
+                        document.getElementById("typingPatternArea").value = typingPattern;
+                    }
+				}
+				catch(err) {
+				}
+
+				try
+				{
+					document.getElementById("resetTypingPatternButton").addEventListener("click", myFunction);
+                    function myFunction() {
+						document.getElementById("textArea").value = "Typing patter";
+						document.getElementById("typingPatternArea").value = "Type some text here to get your typing pattern";
+                    }
+				}
+				catch(err) {
+				}
+            });
+    </script>
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	
+	<div class="container-login100" style="background-image: url('');">
+		<div class="wrap-login200 p-l-55 p-r-55 p-t-40 p-b-30">
+
+				<div class="container-login100-form-btn" style="justify-content: left; ">
+					<a   href='./index.html' style=" color: 	#0B0080;">Back</a>
+				</div>
+				<div class="flex-c p-b-20">
+				</div>
+
+				<span class="login100-form-title p-b-37">
+					Get Typing Pattern
+				</span>
+
+				<div class="wrap-input100 m-b-20" >
+					<textarea class="input200" type="text" rows="6" name="username" id="textArea" placeholder="Type some text here to get your typing pattern"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 m-b-25" >
+					<textarea class="input100" type="text" rows="6" name="pass" id="typingPatternArea" placeholder="Typing pattern" readonly></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-login100-form-btn">
+					<button style="margin-right: 2em; background-color:  rgb(120,193,246)" class="login100-form-btn" id="getTypingPatternButton">
+						Generate
+					</button>
+
+					<button class="login100-form-btn" id="resetTypingPatternButton">
+						Reset
+					</button>
+				</div>
+				
+				
+                
+                <div class="flex-c p-b-20">
+				</div>
+
+		</div>
+	</div>
+	
+
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
